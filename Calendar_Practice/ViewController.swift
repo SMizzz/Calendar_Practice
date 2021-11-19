@@ -8,12 +8,24 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+  
+  @IBOutlet weak var datePicker: UIDatePicker!
+  @IBOutlet weak var dateLabel: UILabel!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view.
+    datePicker.locale = Locale(identifier: "Kor")
+    datePicker.date = Date()
+    datePicker.addTarget(self, action: #selector(dateSelected), for: .valueChanged)
+//    datePicker.preferredDatePickerStyle = .inline
   }
-
-
+  
+  @objc func dateSelected() {
+    print(datePicker.date)
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "yyyy년 MM월 dd일 HH시 mm분"
+    let date = dateFormatter.string(from: datePicker.date)
+    dateLabel.text = date
+  }
 }
 

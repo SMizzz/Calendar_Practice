@@ -83,6 +83,8 @@
 			dependencies = (
 			);
 			name = Calendar_Practice;
+			packageProductDependencies = (
+			);
 			productName = Calendar_Practice;
 			productReference = 020AF87F2745D5B20019DB13 /* Calendar_Practice.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +113,8 @@
 				Base,
 			);
 			mainGroup = 020AF8762745D5B20019DB13;
+			packageReferences = (
+			);
 			productRefGroup = 020AF8802745D5B20019DB13 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
